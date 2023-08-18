@@ -1,38 +1,84 @@
+:root {
+  --primary: #918d8d;
+  --secondary: #8c38ff;
+  --dark: #decdcd;
+  --light: rgb(251, 251, 251);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+  border: 2px solid rgb(22, 195, 22);
+  width: 100%;
+  width: 300px;
+  height: 370px;
+  background-color: rgb(161, 220, 251);
+  overflow: hidden;
+  box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display {
+  max-height: 20px;
+  padding:30px;
+  text-align: right;
+  background-color: rgba(198, 255, 128, 0.317);
+  font-size: 24px;
+  font-weight: 300;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.digitls .operators{
+   background-color: rgba(229, 243, 105, 0.898);
+   font-weight: 700;
+   margin-right: 10px;
+}
+
+.digitls {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+}
+
+.digitls button {
+  border-bottom: 4px solid rgba(13, 52, 64, 0.226);
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+}
+
+.digitls .deleteBtn {
+  background-color: rgba(226, 120, 120, 0.905);
 }
